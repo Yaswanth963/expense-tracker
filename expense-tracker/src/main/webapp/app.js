@@ -46,7 +46,7 @@ function renderExpenses(expenses) {
             <td class="${exp.type}">${exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}</td>
             <td>${exp.amount.toFixed(2)}</td>
             <td>
-                <button class="delete-btn" data-id="${exp.id}" data-userid="${exp.userId}" title="Delete">🗑️</button>
+                <span class="delete-icon" data-id="${exp.id}" data-userid="${exp.userId}" title="Delete" style="cursor:pointer;font-size:1.2em;">🗑️</span>
             </td>`;
         tbody.appendChild(tr);
         if (exp.type === 'credit') balance += exp.amount;
@@ -57,8 +57,8 @@ function renderExpenses(expenses) {
 }
 
 function addDeleteListeners() {
-    document.querySelectorAll('.delete-btn').forEach(btn => {
-        btn.onclick = function() {
+    document.querySelectorAll('.delete-icon').forEach(icon => {
+        icon.onclick = function() {
             const id = this.getAttribute('data-id');
             const userId = this.getAttribute('data-userid');
             if (confirm('Are you sure you want to delete this expense?')) {
