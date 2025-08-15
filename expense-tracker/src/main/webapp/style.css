@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin: 8px 0 4px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.expense-list {
+    margin-top: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.credit {
+    color: green;
+}
+
+.debit {
+    color: red;
+}
+
+.balance {
+    font-size: 1.2em;
+    margin: 16px 0;
+    text-align: right;
+}
+
+.logout {
+    float: none;
+    margin-left: 16px;
+    background: #dc3545;
+}
+
+.logout:hover {
+    background: #a71d2a;
+}
+
+#error-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-content {
+    background: #fff;
+    padding: 24px 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #333;
+    min-width: 260px;
+    max-width: 90vw;
+    text-align: center;
+}
+
+#error-message {
+    margin-bottom: 16px;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.header-row h2 {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.balance-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0 24px 0;
+    font-size: 1.2em;
+}
+
+.balance-label {
+    margin-right: 8px;
+}
+
+.balance-amount {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.balance-positive {
+    color: green;
+}
+
+.balance-negative {
+    color: red;
+}
